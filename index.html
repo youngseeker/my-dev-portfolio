@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adeyemi Adeniji // CS Explorer & Leader</title>
+    <!-- Load Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter as the primary font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Use Fira Code for the terminal/code sections -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Custom VS Code Theme Variables & Terminal Styles -->
+    <style>
+        :root {
+            --bg-dark: #1e1e1e;           /* VS Code Background */
+            --bg-panel: #252526;          /* Slightly Lighter Panel/Card Background */
+            --text-light: #cccccc;        /* Default Body Text */
+            --text-heading: #ffffff;      /* Heading Text */
+            --accent-blue: #007ACC;       /* Primary Interactive/Highlight Color */
+            --code-yellow: #FFC66D;       /* Variable/Code Highlight */
+            --code-green: #6A9955;        /* Comment/Success Text */
+            --border-color: #3f3f46;      /* Subtle border color */
+            --font-code: 'Fira Code', monospace;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+        }
+
+        /* Terminal-Specific Styles */
+        .terminal-container {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--accent-blue);
+            font-family: var(--font-code);
+            box-shadow: 0 0 20px rgba(0, 122, 204, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .terminal-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 122, 204, 0.4);
+        }
+        .terminal-header {
+            background-color: #1e1e1e;
+            color: var(--accent-blue);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .terminal-line .command { color: var(--code-yellow); }
+        .terminal-line .output { color: var(--code-green); }
+        .blink { animation: blink-caret 0.75s step-end infinite; }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--text-heading); }
+        }
+        .project-card {
+             transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 122, 204, 0.2);
+        }
+    </style>
+</head>
+
+<body class="text-gray-200">
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Header / Hero Section -->
+        <header class="text-center py-16">
+            <h1 class="text-6xl font-extrabold text-white mb-4 tracking-tighter">
+                ADEYEMI ADENIJI
+            </h1>
+            <p class="text-2xl text-blue-400 font-code">// Computer Science | Leadership | Culture Shaping | MindShift</p>
+            <p class="text-lg mt-4 text-gray-400 max-w-2xl mx-auto">
+                Computer Science Student passionate about Leadership and Culture Shaping. Building technical solutions while driving positive team environments.
+            </p>
+            <div class="mt-8">
+                <a href="#projects" class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-xl">
+                    View My Work
+                </a>
+                <a href="mailto:danieladeniji001@gmail.com" class="inline-block px-8 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition duration-300 ml-4">
+                    Get in Touch
+                </a>
+            </div>
+        </header>
+
+        <!-- Dynamic Skills Terminal Section -->
+        <section id="skills" class="py-16">
+            <h2 class="text-3xl font-bold text-white mb-8 border-b border-gray-700 pb-2">Skills & Status Terminal</h2>
+
+            <div id="skills-terminal-module" class="terminal-container max-w-4xl mx-auto rounded-lg overflow-hidden">
+                <div class="terminal-header p-3 font-semibold text-sm">
+                    <span class="command">bash</span> - AdeyemiAdeniji@ChavingsSystems:~$ 
+                </div>
+                <div id="terminal-output" class="p-4 text-sm whitespace-pre-wrap min-h-[150px]"></div>
+                <!-- Cursor displayed by JS -->
+            </div>
+        </section>
+
+        <!-- Project Showcase Section -->
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl font-bold text-white mb-8 border-b border-gray-700 pb-2">Project Showcase</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Project Card 1: Junior Web Developer Work -->
+                <div class="project-card p-6 bg-gray-800 border border-gray-700 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Junior Web Developer: Sam Soyombo CP</h3>
+                    <p class="text-sm mb-4">Work completed during my 1 year 9 months tenure, focusing on functional development and responsive design.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-yellow-800 text-yellow-300 px-3 py-1 text-xs rounded-full">Web Hosting</span>
+                        <span class="bg-green-800 text-green-300 px-3 py-1 text-xs rounded-full">WordPress Design</span>
+                        <span class="bg-gray-700 text-gray-300 px-3 py-1 text-xs rounded-full">Technical Training</span>
+                    </div>
+                    <a href="https://www.linkedin.com/in/adeyemi-adeniji-828204253" class="text-sm text-blue-400 hover:text-white font-code mr-4">Details on LinkedIn <span class="text-yellow-400">-></span></a>
+                    <a href="#" class="text-sm text-green-400 hover:text-white font-code">Live Project (Pending) <span class="text-yellow-400">-></span></a>
+                </div>
+
+                <!-- Project Card 2: Python Data Science Application (Mock) -->
+                <div class="project-card p-6 bg-gray-800 border border-gray-700 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Python Data Structures & AI Ethics Project</h3>
+                    <p class="text-sm mb-4">A showcase of Python fundamentals (Data Structures, Basic Operators) and foundational knowledge in AI Ethics from certified courses.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-800 text-cyan-300 px-3 py-1 text-xs rounded-full">Python (DSA)</span>
+                        <span class="bg-purple-800 text-purple-300 px-3 py-1 text-xs rounded-full">AI Ethics</span>
+                        <span class="bg-red-800 text-red-300 px-3 py-1 text-xs rounded-full">Data Science Prep</span>
+                    </div>
+                    <a href="#" class="text-sm text-blue-400 hover:text-white font-code mr-4">View GitHub Repo <span class="text-yellow-400">-></span></a>
+                    <a href="#" class="text-sm text-green-400 hover:text-white font-code">Live Demo (Pending) <span class="text-yellow-400">-></span></a>
+                </div>
+            </div>
+            
+            <p class="text-center mt-10 text-gray-400 font-code">
+                // Note: Replace 'Pending' links with actual GitHub and Live Demo URLs for your projects.
+            </p>
+        </section>
+
+        <!-- Journey / Experience Timeline Section -->
+        <section id="journey" class="py-16">
+            <h2 class="text-3xl font-bold text-white mb-8 border-b border-gray-700 pb-2">Experience & Academic Journey</h2>
+            <div class="space-y-8 max-w-4xl mx-auto">
+                
+                <!-- Education: NOUN -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-blue-400 shadow-md">
+                    <p class="text-sm text-gray-400 font-code">August 2024 - July 2028</p>
+                    <h3 class="text-xl font-semibold text-white">Bachelor of Science, Computer Science</h3>
+                    <p class="text-gray-300 mt-1">National Open University of Nigeria (NOUN)</p>
+                </div>
+                
+                <!-- Experience: Sam Soyombo Career Pathways Ltd -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-400 shadow-md">
+                    <p class="text-sm text-gray-400 font-code">April 2023 - December 2024 (1 yr 9 mos)</p>
+                    <h3 class="text-xl font-semibold text-white">Junior Web Developer</h3>
+                    <p class="text-gray-300 mt-1">Sam Soyombo Career Pathways Ltd</p>
+                </div>
+
+                <!-- Experience: Chavings Systems -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-400 shadow-md">
+                    <p class="text-sm text-gray-400 font-code">January 2025 - Present (10 mos)</p>
+                    <h3 class="text-xl font-semibold text-white">Co-Founder & COO</h3>
+                    <p class="text-gray-300 mt-1">Chavings Systems, Nigeria</p>
+                </div>
+                
+                <!-- Experience: Royal Ambassadors of Nigeria -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-green-400 shadow-md">
+                    <p class="text-sm text-gray-400 font-code">October 2022 - Present</p>
+                    <h3 class="text-xl font-semibold text-white">Junior and Intermediate Adviser/President</h3>
+                    <p class="text-gray-300 mt-1">ROYAL AMBASSADORS OF NIGERIA, Ibadan, Oyo State, Nigeria</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 border-t border-gray-700 mt-10 text-center text-sm text-gray-500">
+            <p>&copy; 2025 Adeyemi Adeniji. Hand-coded in VS Code. // <a href="mailto:danieladeniji001@gmail.com" class="text-blue-400 hover:text-white">Contact</a> | <a href="https://www.linkedin.com/in/adeyemi-adeniji-828204253" target="_blank" class="text-blue-400 hover:text-white">LinkedIn</a></p>
+        </footer>
+    </div>
+
+    <!-- Terminal JavaScript Logic -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const outputElement = document.getElementById('terminal-output');
+        const terminalContainer = document.getElementById('skills-terminal-module');
+
+        // Dynamically add a cursor to the terminal header
+        const header = terminalContainer.querySelector('.terminal-header');
+        const cursor = document.createElement('span');
+        cursor.id = 'cursor';
+        cursor.className = 'blink text-white inline-block w-2 h-4 align-top';
+        cursor.style.backgroundColor = 'var(--text-heading)';
+        header.appendChild(cursor);
+
+        // Define the sequence of commands and responses (UPDATED WITH YOUR SKILLS!)
+        const lines = [
+            { type: 'command', text: 'fetch --status' },
+            { type: 'output', text: 'Status: Actively managing Chavings Systems & pursuing CS degree.' },
+            { type: 'command', text: 'print_skills --core' },
+            { type: 'output', text: 'Core Skills: WordPress Design, Technical Training, Web Hosting, Leadership' },
+            { type: 'command', text: 'ls /certifications/tech' },
+            { type: 'output', text: 'Certifications: Python Data Structures, AI Ethics, Canva Essentials' },
+            { type: 'command', text: 'git commit -m "Ready for new challenges"' },
+        ];
+
+        let lineIndex = 0;
+        let charIndex = 0;
+        let isTyping = false;
+
+        function typeWriter() {
+            if (lineIndex < lines.length) {
+                isTyping = true;
+                const currentLine = lines[lineIndex];
+                const prefix = currentLine.type === 'command' ? '$ ' : '=> '; 
+                const textToType = prefix + currentLine.text;
+                const className = currentLine.type;
+
+                if (charIndex < textToType.length) {
+                    // Start a new line container on the first character
+                    if (charIndex === 0) {
+                        const newLine = document.createElement('div');
+                        newLine.className = 'terminal-line';
+                        outputElement.appendChild(newLine);
+                    }
+
+                    // Append the next character
+                    const lastLine = outputElement.lastElementChild;
+                    lastLine.innerHTML = `<span class="${className}">${textToType.substring(0, charIndex + 1)}</span>`;
+
+                    charIndex++;
+                    setTimeout(typeWriter, 50); // Typing speed
+                } else {
+                    // End of line, move to next line
+                    isTyping = false;
+                    charIndex = 0;
+                    lineIndex++;
+                    setTimeout(typeWriter, 1000); // Pause before next line
+                }
+            } else {
+                // All lines typed, stop the cursor animation
+                cursor.style.animation = 'none';
+                cursor.style.backgroundColor = 'transparent';
+                outputElement.lastElementChild.innerHTML += `<span class="terminal-line"><span class="command">_</span></span>`;
+            }
+        }
+
+        // Start typing sequence
+        if (outputElement) {
+            outputElement.innerHTML = '';
+            typeWriter();
+        }
+    });
+    </script>
+</body>
+</html>
